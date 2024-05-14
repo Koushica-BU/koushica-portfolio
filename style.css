@@ -35,3 +35,344 @@
                  0 0 50px orangered;
     transform:scale(1.1);
 }
+
+span{
+    color: orangered;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin:0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: orangered;
+    border-bottom: 3px solid orangered;
+}
+
+.contact{
+    padding: 10px 28px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact:hover{
+    background-color: orangered;
+    box-shadow: 0 0 25px orangered;
+    color: white;
+}
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(241,241,241);
+    display:flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+
+.home-content{
+    max-width: 800px;
+}
+
+.home-content h3{
+    font-size: 42px;
+}
+
+.home-content h1{
+    font-size:62px;
+    line-height: 1.2;
+}
+
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+
+.btn-1{
+    padding: 15px 28px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing:1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-1:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.btn-2{
+    padding: 15px 28px;
+    background-color: orangered;
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-2:hover{
+    background-color: white;
+    color: orangered;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0.6);
+    width: 50px;
+}
+.social{
+    text-align:center;
+    padding-bottom: 25px;
+    color: white;
+}
+.social a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display:inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    transition: 0.3s ease;
+}
+
+.contactSection {
+    padding-top: 5rem;
+    height: 100vh;
+    color: #fff;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: center!important
+}
+
+.contactSection .titleContainer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2.5%;
+    flex-direction: column
+}
+
+.contactSection .titleContainer .tabNames {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-left: 1rem;
+    align-items: center;
+    display: flex
+}
+
+.contactSection .titleContainer .HrlineDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column-reverse;
+    width: 75%
+}
+
+.contactSection .titleContainer .HrlineDiv .titleHrLine1 {
+    background-color: #fff;
+    height: 1.5px;
+    margin: .25rem;
+    width: 60%;
+    margin-left: 40%
+}
+
+.contactSection .titleContainer .HrlineDiv .titleHrLine2 {
+    background-color: #fff;
+    height: 1.5px;
+    margin: .25rem;
+    width: 60%
+}
+
+.contactSection .socialContainer {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 0rem
+}
+
+.contactSection .socialContainer .socialIcon {
+    border-radius: 10%;
+    padding: .75rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all .4s ease;
+    text-decoration: none;
+    color: #fff
+}
+
+.contactSection .socialContainer .socialIcon .socialIconItem {
+    width: 2.5rem;
+    height: 2.5rem
+}
+
+.contactSection .socialContainer .instagram:hover {
+    background-color: #ee4097c7;
+    transition: .4s;
+    scale: .9
+}
+
+.contactSection .socialContainer .github:hover {
+    background-color: #242c34c7;
+    transition: .4s;
+    scale: .9
+}
+
+.contactSection .socialContainer .linkedin:hover {
+    background-color: #0a66c2c7;
+    transition: .4s;
+    scale: .9
+}
+
+.contactSection .socialContainer .twitter:hover {
+    background-color: #14a5edb6;
+    transition: .4s;
+    scale: .9
+}
+
+.contactSection .socialContainer .leetcode:hover {
+    background-color: #e2a148c7;
+    transition: .4s;
+    scale: .9
+}
+
+.contactSection .socialContainer .hackerrank:hover {
+    background-color: #00e861c7;
+    transition: .4s;
+    scale: .9
+}
+
+.contactSection .Container-div {
+    perspective: 400px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    bottom: -20%;
+    left: 0rem;
+    scale: 2
+}
+
+.contactSection .Container-div .container {
+    transform: rotateX(20deg);
+    transform-origin: bottom;
+    filter: contrast(25);
+    --mask: linear-gradient(rgba(0, 0, 0, .45), red);
+    width: 5000px;
+    height: 15rem;
+    position: absolute;
+    background: #000
+}
+
+.contactSection .Container-div .container:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(#fff,transparent) 0 0/.75em .75em space;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    content: ""
+}
+
+.contactSection .sendEmail {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem
+}
+
+.contactSection .sendEmail .someEmailIntro {
+    font-size: .9rem;
+    width: 55rem;
+    word-wrap: break-word;
+    text-align: center
+}
+
+.contactSection .sendEmail .sendEmailBtn {
+    height: 2.5rem;
+    margin-top: 2rem;
+    border: 1px solid white;
+    padding: 0 2rem;
+    font-size: .9rem;
+    background: transparent;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .2s;
+    transition-delay: 50ms;
+    position: relative;
+    background: #fff;
+    color: #000;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 #fff;
+    transition: all .3s ease-in-out;
+    cursor: pointer
+}
+
+.contactSection .sendEmail .sendEmailBtn:hover {
+    background: transparent;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 0 0 5px #fff;
+    transition: all .3s ease-in-out
+}
+
+.contactSection .sendEmail .signContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .85rem;
+    margin: 5rem;
+    z-index: 2
+}
+
+.contactSection .sendEmail .logo {
+    filter: invert(1);
+    width: 15vw;
+    margin: .5rem 0
+}
