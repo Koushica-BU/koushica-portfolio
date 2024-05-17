@@ -1,378 +1,281 @@
-*{
+/* GENERAL */
+
+/* Font family imported from fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', 
-    sans-serif;
-    text-decoration: none;
-    list-style: none;
 }
 
-.header{
-    position: fixed;
-    top:0;
-    left: 0;
+body {
+    font-family: "GFS Neohellenic", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
     width: 100%;
-    padding: 35px 12%;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter:blur(10px);
-    display: flex;
-    justify-content: space-between;
+    background-color: #000;
+    box-sizing: border-box;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+
+/* DESKTOP NAV */
+
+.navbar, 
+.nav-links {
+    display:flex;
+}
+
+.navbar {
+    justify-content: space-around;
     align-items: center;
-    z-index:100;
+    height: 17vh;
+    background-color: black;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    height: 10vh;
+    display: flex;
+    position: sticky !important;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .logo{
-    font-size: 25px;
-    color: white;
-    font-weight: 600;
-    transition: 0.3s ease;
+    width: 7vw;
+    margin: .75rem 0 .75rem 2rem;
 }
 
-.logo:hover{
-    color: orangered;
-    text-shadow: 0 0 25px orangered,
-                 0 0 50px orangered;
-    transform:scale(1.1);
-}
-
-span{
-    color: orangered;
-}
-
-.navbar a{
-    font-size: 18px;
-    color: white;
-    font-weight: 500;
-    margin:0 20px;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s ease;
-}
-
-.navbar a:hover,
-.navbar a.active{
-    color: orangered;
-    border-bottom: 3px solid orangered;
-}
-
-.contact{
-    padding: 10px 28px;
-    background-color: white;
-    color: black;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-
-.contact:hover{
-    background-color: orangered;
-    box-shadow: 0 0 25px orangered;
-    color: white;
-}
-
-.home{
-    width: 100%;
-    min-height: 100vh;
-    background: rgb(241,241,241);
-    display:flex;
-    align-items: center;
-    gap: 7em;
-    padding: 30px 12% 0;
-}
-
-.home-content{
-    max-width: 800px;
-}
-
-.home-content h3{
-    font-size: 42px;
-}
-
-.home-content h1{
-    font-size:62px;
-    line-height: 1.2;
-}
-
-.home-content p{
-    font-size: 18px;
-    margin: 25px 0 30px;
-}
-
-.btn-box{
-    width: 345px;
-    display: flex;
-    gap: 2em;
-}
-
-.btn-1{
-    padding: 15px 28px;
-    background-color: black;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    font-size: 18px;
-    letter-spacing:1px;
-    font-weight: 600;
-    transition: 0.3s ease;
+.logo:hover {
     cursor: pointer;
 }
 
-.btn-1:hover{
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+.nav-bar {
+    margin: 1rem 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: sticky;
 }
 
-.btn-2{
-    padding: 15px 28px;
-    background-color: orangered;
+.nav-links {
+    font-family: Inter,system-ui,Avenir,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+a {
+    margin: 0rem 1rem;
     color: white;
-    border: 2px solid black;
-    border-radius: 8px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.btn-2:hover{
-    background-color: white;
-    color: orangered;
-}
-
-::-webkit-scrollbar{
-    width: 15px;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: orangered;
-}
-
-::-webkit-scrollbar-track{
-    background-color: rgba(0,0,0,0.6);
-    width: 50px;
-}
-.social{
-    text-align:center;
-    padding-bottom: 25px;
-    color: white;
-}
-.social a{
-    font-size: 24px;
-    color: white;
-    border: 2px solid orangered;
-    width: 40px;
-    height: 40px;
-    line-height: 38px;
-    display:inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
-    transition: 0.3s ease;
-}
-
-.contactSection {
-    padding-top: 5rem;
-    height: 100vh;
-    color: #fff;
-    background-color: #000;
-    position: relative;
-    overflow: hidden;
-    scroll-snap-align: center!important
-}
-
-.contactSection .titleContainer {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    padding: 2.5%;
-    flex-direction: column
-}
-
-.contactSection .titleContainer .tabNames {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-left: 1rem;
-    align-items: center;
-    display: flex
-}
-
-.contactSection .titleContainer .HrlineDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column-reverse;
-    width: 75%
-}
-
-.contactSection .titleContainer .HrlineDiv .titleHrLine1 {
-    background-color: #fff;
-    height: 1.5px;
-    margin: .25rem;
-    width: 60%;
-    margin-left: 40%
-}
-
-.contactSection .titleContainer .HrlineDiv .titleHrLine2 {
-    background-color: #fff;
-    height: 1.5px;
-    margin: .25rem;
-    width: 60%
-}
-
-.contactSection .socialContainer {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin: 0rem
-}
-
-.contactSection .socialContainer .socialIcon {
-    border-radius: 10%;
-    padding: .75rem;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
-    transition: all .4s ease;
     text-decoration: none;
-    color: #fff
+    text-decoration-color: white;
+    font-size: 1rem
 }
 
-.contactSection .socialContainer .socialIcon .socialIconItem {
-    width: 2.5rem;
-    height: 2.5rem
+a:hover{
+    color: rgb(200, 170, 245);
 }
 
-.contactSection .socialContainer .instagram:hover {
-    background-color: #ee4097c7;
-    transition: .4s;
-    scale: .9
+/* Hamburger menu */
+
+#hamburger-nav{
+    display: none;
 }
 
-.contactSection .socialContainer .github:hover {
-    background-color: #242c34c7;
-    transition: .4s;
-    scale: .9
-}
-
-.contactSection .socialContainer .linkedin:hover {
-    background-color: #0a66c2c7;
-    transition: .4s;
-    scale: .9
-}
-
-.contactSection .socialContainer .twitter:hover {
-    background-color: #14a5edb6;
-    transition: .4s;
-    scale: .9
-}
-
-.contactSection .socialContainer .leetcode:hover {
-    background-color: #e2a148c7;
-    transition: .4s;
-    scale: .9
-}
-
-.contactSection .socialContainer .hackerrank:hover {
-    background-color: #00e861c7;
-    transition: .4s;
-    scale: .9
-}
-
-.contactSection .Container-div {
-    perspective: 400px;
-    height: 100%;
-    overflow: hidden;
+.hamburger-menu {
     position: relative;
-    bottom: -20%;
-    left: 0rem;
-    scale: 2
+    display: inline-block;
+    margin: 1rem 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.contactSection .Container-div .container {
-    transform: rotateX(20deg);
-    transform-origin: bottom;
-    filter: contrast(25);
-    --mask: linear-gradient(rgba(0, 0, 0, .45), red);
-    width: 5000px;
-    height: 15rem;
-    position: absolute;
-    background: #000
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
 }
 
-.contactSection .Container-div .container:before {
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links{
     position: absolute;
-    top: 0;
+    top: 100%;
     right: 0;
-    bottom: 0;
-    left: 0;
-    background: radial-gradient(#fff,transparent) 0 0/.75em .75em space;
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
-    content: ""
+    background-color: black;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
 }
 
-.contactSection .sendEmail {
+.menu-links a {
+    font-family: Inter,system-ui,Avenir,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+a:hover{
+    color: rgb(200, 170, 245);
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 500px;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+
+.hamburger-icon span:first-child {
+    transform:none;
+}
+.hamburger-icon span:nth-child(2) {
+    opacity: 1;
+}
+.hamburger-icon span:last-child {
+    transform:none;
+}
+
+/* Sections */
+
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2rem
 }
 
-.contactSection .sendEmail .someEmailIntro {
-    font-size: .9rem;
-    width: 55rem;
-    word-wrap: break-word;
-    text-align: center
+/* About */
+
+#about {
+    justify-content: center;
+    gap: 5rem;
 }
 
-.contactSection .sendEmail .sendEmailBtn {
-    height: 2.5rem;
-    margin-top: 2rem;
-    border: 1px solid white;
-    padding: 0 2rem;
-    font-size: .9rem;
-    background: transparent;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .2s;
-    transition-delay: 50ms;
-    position: relative;
-    background: #fff;
-    color: #000;
-    border: 1px solid #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 #fff;
-    transition: all .3s ease-in-out;
-    cursor: pointer
+.section__text {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: Inter,sans-serif;
+    align-self: center;
+    text-align: center;
+    color: white;
+    z-index: 20;
 }
 
-.contactSection .sendEmail .sendEmailBtn:hover {
-    background: transparent;
-    background-color: #000;
-    color: #fff;
-    box-shadow: 0 0 5px #fff;
-    transition: all .3s ease-in-out
+.section__text__p1{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 7rem;
 }
 
-.contactSection .sendEmail .signContainer {
+.title {
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 900;
+    padding-bottom: 1rem;
+}
+
+.title .highlight_text{
+    color: #ffc6ff;
+}
+
+.section__text__p2{
+    font-size: 2.5rem;
+}
+
+.section__text__p2 .highlight_text{
+    color: #fcf5c7;
+}
+
+.profile_summary{
+    font-size: 1rem;
+    padding: 3rem;
+    font-weight: 400
+}
+
+/* BUTTONS */
+
+.btn-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: .85rem;
-    margin: 5rem;
-    z-index: 2
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-.contactSection .sendEmail .logo {
-    filter: invert(1);
-    width: 15vw;
-    margin: .5rem 0
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1, .btn-color-2 {
+    border: rgb(53, 53, 53) 0.2rem solid;
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+.btn-color-2:hover, 
+.btn-color-1:hover {
+    background: white;
+    color: black;
+    border: rgb(255, 255, 255) 0.2rem solid;
+    cursor: pointer;
+}
+
+.btn-container {
+    gap: 1rem;
 }
