@@ -1,60 +1,277 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" style="color-scheme: light;">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="icon" type="image/svg+xml" href="./assets/arrow.png"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
     <title>Koushica Bosadi Ulaganathan</title>
-</head>
-<body>
+  </head>
+  <body>
     <script src="script.js"></script>
-    <div id="desktop-nav" class="navbar sticky">
-        <a href="#top" class="logo">
-            <img src="./assets/signature.png" alt="Signature logo">
-        </a>
-        <div class="nav-bar">
-            <ul class="nav-links">
-                <!-- <li><a href="#projects"> Projects </a></li> -->
-                <li><a href="#skills"> Skills </a></li>
-                <li><a href="#background"> Background </a></li>
-                <li><a href="#contact"> Contact </a></li>
-            </ul>
-        </div>
-    </div>
-    <nav id="hamburger-nav" class="sticky">
-        <a href="#top" class="logo">
-            <img src="./assets/signature.png" alt="Signature logo">
-        </a>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <!-- <li><a href="#projects" onclick="toggleMenu()"> Projects </a></li> -->
-                <li><a href="#skills" onclick="toggleMenu()"> Skills </a></li>
-                <li><a href="#background" onclick="toggleMenu()"> Background </a></li>
-                <li><a href="#contact" onclick="toggleMenu()"> Contact </a></li>
-            </div>
-        </div>
+    <nav id="desktop-nav" class="navbar sticky">
+      <a href="#about" class="signature_logo">
+        <img src="./assets/signature.png" alt="Signature logo">
+      </a>
+      <div class="nav-bar">
+        <ul class="nav-links">
+          <!-- <li><a href="#projects"> Projects </a></li> -->
+          <li><a href="#skills"> Skills </a></li>
+          <li><a href="#background"> Background </a></li>
+          <li><a href="#contact"> Contact </a></li>
+        </ul>
+      </div>
     </nav>
-    <section id="about">
-        <div class="section__text">
-            <p class="section__text__p1 typing_animation"> Hello, I'm</p>
-            <h1 class="title">Koushica <span class="highlight_text"> Bosadi Ulaganathan </span></h1>
-            <p class="section__text__p2">A <span class="highlight_text"> Software Engineer </span></p>
-            <div class="profile_summary">
-                Motivated Software Engineer with over 2+ years of hands-on experience, dedicated to leveraging technology to create innovative solutions for clients. Skilled in HTML, CSS, JavaScript, Node.js, MySQL, and diverse frameworks, with a proven track record of leading cross-functional teams and delivering projects on schedule. Seeking a Software Engineer position to apply my programming and debugging expertise towards enhancing application scalability, reliability, and usability.
-            </div>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Koushica_Bosadi_Ulaganathan.pdf')"> Download Resume </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'"> Contact </button>
-            </div>
+    <nav id="hamburger-nav" class="sticky">
+      <a href="#about" class="signature_logo">
+        <img src="./assets/signature.png" alt="Signature logo">
+      </a>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </section>
-</body>
+        <div class="menu-links">
+          <!-- <li><a href="#projects" onclick="toggleMenu()"> Projects </a></li> -->
+          <li><a href="#skills" onclick="toggleMenu()"> Skills </a></li>
+          <li><a href="#background" onclick="toggleMenu()"> Background </a></li>
+          <li><a href="#contact" onclick="toggleMenu()"> Contact </a></li>
+        </div>
+      </div>
+    </nav>
+    <div class="scroll-snap">
+      <section id="about">
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Koushica <span class="highlight_text"> Bosadi Ulaganathan </span></h1>
+          <p class="section__text__p2">A <span class="highlight_text"> Software Engineer </span></p>
+          <div class="profile_summary">
+              Motivated Software Engineer with over 2+ years of hands-on experience, dedicated to leveraging technology to create innovative solutions for clients. Skilled in HTML, CSS, JavaScript, Node.js, MySQL, and diverse frameworks, with a proven track record of leading cross-functional teams and delivering projects on schedule. Seeking a Software Engineer position to apply my programming and debugging expertise towards enhancing application scalability, reliability, and usability.
+          </div>
+          <div class="btn-container">
+              <button class="btn btn-color-2" onclick="window.open('./assets/Koushica_Bosadi_Ulaganathan.pdf')"> Download Resume </button>
+              <button class="btn btn-color-1" onclick="location.href='./#contact'"> Contact </button>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <div class="background__section">
+          <p class="section__text__p1">Get to know More about me</p>
+          <h1 class="title"> Explore <span class="highlight_text"> My Skills </span></h1>
+          <div class="HrlineDiv">
+              <div class="titleHrLine2"></div>
+              <div class="titleHrLine1"></div>
+          </div>
+        </div>
+        <div class="skills_list_container">
+          <div class="skills_containers">
+            <div class="details-container details-bg1">
+              <h2 class="experience-sub-title">Programming Languages</h2>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>HTML</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>CSS</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Javascript</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Java</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>TypeScript</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Python</h4>
+                </article>
+              </div>
+            </div>
+            <div class="details-container details-bg2">
+              <h2 class="experience-sub-title">Frameworks and Libraries</h2>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Vue.js</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>React.js</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Node.js</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Tailwind CSS</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>JQuery</h4>
+                </article>
+              </div>
+            </div>
+            <div class="details-container details-bg1">
+              <h2 class="experience-sub-title">Tools and Platform</h2>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Visual Studio</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Git</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Drupal</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Omni CMS</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Canva</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Figma</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Tableau</h4>
+                </article>
+              </div>
+            </div>
+            <div class="details-container details-bg2">
+              <h2 class="experience-sub-title">Databases and Development Concepts</h2>
+              <div class="article-container">
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>MySQL</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Oracle PL/SQL</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Object-Oriented Programming</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>Data Structures</h4>
+                </article>
+                <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <h4>JSON parsing & formatting</h4>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="background">
+        <div class="InterestSection">
+          <div class="background__section">
+            <p class="section__text__p1">Learn more about me</p>
+            <h1 class="title"> <span class="highlight_text">Education, </span><span class="highlight_text1"> Work Experience </span></h1>
+            <div class="HrlineDiv">
+                <div class="titleHrLine2"></div>
+                <div class="titleHrLine1"></div>
+            </div>
+          </div>
+          <div class="IconContainer ">
+            <div class="ImageContainer hover-bg1 Active">
+              <div class="ImageResize"><img src="/assets/education_logo.webp" alt="education" class="IconImage"></div>
+              <div class="titleforDiv highlight_text1">Education</div>
+            </div>
+            <div class="ImageContainer hover-bg2">
+              <div class="ImageResize "><img src="/assets/work.webp" alt="work experience" class="IconImage"></div>
+              <div class="titleforDiv highlight_text">Work Experience</div>
+            </div>
+          </div>
+          <div class="ContentContainer">
+            <div class="AllDetails education">
+              <div class="details">
+                <div class="logo">
+                  <img src="/assets/unt_logo.jpg" alt="">
+                </div>
+                <div class="others">
+                  <div class="Institute">University of North Texas</div>
+                  <div class="degree">Master of Science - Information Systems & Technologies</div>
+                  <div class="Duration">January 2024 - May 2024</div>
+                  <div class="Score">GPA: 4</div>
+                </div>
+              </div>
+              <div class="details">
+                <div class="logo">
+                  <img src="/assets/vcet_logo.jpg" alt="">
+                </div>
+                <div class="others">
+                  <div class="Institute">Velammal College of Engineering &amp; Technology</div>
+                  <div class="degree">Bachelor of Engineering - Electronics &amp; Communications Engineering</div>
+                  <div class="Duration">June 2015 - May 2019</div>
+                  <div class="Score">GPA: 3.3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="contactSection">
+          <div class="background__section">
+            <h1 class="title"><span class="highlight_text1"> Let's Connect </span></h1>
+            <div class="HrlineDiv">
+                <div class="titleHrLine2"></div>
+                <div class="titleHrLine1"></div>
+            </div>
+          </div>
+          <div class="contact_container">
+            <div class="contact_info">
+              <div class="contact_info_container">
+                <div class="contact_article_container">
+                  <article>
+                    <img src="./assets/email.png" alt="Email icon" class="icon contact-icon1"/>
+                    <h4>koushica01@gmail.com</h4>
+                  </article>
+                  <article>
+                    <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon2" />
+                    <h4>https://www.linkedin.com/in/koushica-&#x2060;bu</h4>
+                  </article>
+                  <article>
+                    <img src="./assets/github.png" alt="Github icon" class="icon contact-icon2" />
+                    <h4>https://github.com/Koushica-&#x2060;BU</h4>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sendEmail">
+            <div class="greeting_msg">Excited to connect with like-minded individuals! Send me a message if you want to explore ideas, discuss projects, or just share a friendly greeting.</div>
+            <a class="btn-container" href="mailto:koushica01@gmail.com">
+              <button class="btn emailbtn">Send Email</button>
+            </a>
+          </div>
+        </div>
+        <div class="signContainer">
+          <div class="signDiv">Design &amp; Developed By</div>
+          <img src="./assets/signature.png" alt="Signature logo" class="design_sign">
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
