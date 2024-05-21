@@ -21,6 +21,7 @@
           <li><a href="#skills"> Skills </a></li>
           <li><a href="#background"> Background </a></li>
           <li><a href="#contact"> Contact </a></li>
+          <li><a href="./assets/Koushica_Bosadi_Ulaganathan.pdf" target="_blank_"> Resume </a></li>
         </ul>
       </div>
     </nav>
@@ -39,6 +40,7 @@
           <li><a href="#skills" onclick="toggleMenu()"> Skills </a></li>
           <li><a href="#background" onclick="toggleMenu()"> Background </a></li>
           <li><a href="#contact" onclick="toggleMenu()"> Contact </a></li>
+          <li><a href="./assets/Koushica_Bosadi_Ulaganathan.pdf" target="_blank_"> Resume </a></li>
         </div>
       </div>
     </nav>
@@ -58,9 +60,8 @@
         </div>
       </section>
       <section id="skills">
-        <div class="background__section">
-          <p class="section__text__p1">Get to know More about me</p>
-          <h1 class="title"> Explore <span class="highlight_text"> My Skills </span></h1>
+        <div class="titleContainer">
+          <span class="sectiontitle">Tech Stack</span>
           <div class="HrlineDiv">
               <div class="titleHrLine2"></div>
               <div class="titleHrLine1"></div>
@@ -185,25 +186,24 @@
       </section>
       <section id="background">
         <div class="InterestSection">
-          <div class="background__section">
-            <p class="section__text__p1">Learn more about me</p>
-            <h1 class="title"> <span class="highlight_text">Education, </span><span class="highlight_text1"> Work Experience </span></h1>
+          <div class="titleContainer">
+            <span class="sectiontitle">Background</span>
             <div class="HrlineDiv">
                 <div class="titleHrLine2"></div>
                 <div class="titleHrLine1"></div>
             </div>
           </div>
-          <div class="IconContainer ">
-            <div class="ImageContainer hover-bg1 Active">
+          <div class="IconContainer" >
+            <div class="ImageContainer hover-bg1 Active" id="education" onclick="openBackground(this)">
               <div class="ImageResize"><img src="/assets/education_logo.webp" alt="education" class="IconImage"></div>
               <div class="titleforDiv highlight_text1">Education</div>
             </div>
-            <div class="ImageContainer hover-bg2">
+            <div class="ImageContainer hover-bg2" id="workEx" onclick="openBackground(this)">
               <div class="ImageResize "><img src="/assets/work.webp" alt="work experience" class="IconImage"></div>
               <div class="titleforDiv highlight_text">Work Experience</div>
             </div>
           </div>
-          <div class="ContentContainer">
+          <div class="ContentContainer" id="education_details">
             <div class="AllDetails education">
               <div class="details">
                 <div class="logo">
@@ -212,7 +212,7 @@
                 <div class="others">
                   <div class="Institute">University of North Texas</div>
                   <div class="degree">Master of Science - Information Systems & Technologies</div>
-                  <div class="Duration">January 2024 - May 2024</div>
+                  <div class="Duration">January 2023 - May 2024</div>
                   <div class="Score">GPA: 4</div>
                 </div>
               </div>
@@ -229,47 +229,147 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="contact">
-        <div class="contactSection">
-          <div class="background__section">
-            <h1 class="title"><span class="highlight_text1"> Let's Connect </span></h1>
-            <div class="HrlineDiv">
-                <div class="titleHrLine2"></div>
-                <div class="titleHrLine1"></div>
-            </div>
-          </div>
-          <div class="contact_container">
-            <div class="contact_info">
-              <div class="contact_info_container">
-                <div class="contact_article_container">
-                  <article>
-                    <img src="./assets/email.png" alt="Email icon" class="icon contact-icon1"/>
-                    <h4>koushica01@gmail.com</h4>
-                  </article>
-                  <article>
-                    <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon2" />
-                    <h4>https://www.linkedin.com/in/koushica-&#x2060;bu</h4>
-                  </article>
-                  <article>
-                    <img src="./assets/github.png" alt="Github icon" class="icon contact-icon2" />
-                    <h4>https://github.com/Koushica-&#x2060;BU</h4>
-                  </article>
+          <div class="ContentContainer hide" id="workEx_details">
+            <div class="AllDetails workEx">
+              <div class="details">
+                <div class="logo">
+                  <img src="/assets/unt_logo.jpg" alt="">
+                </div>
+                <div class="others">
+                  <div class="Institute">University of North Texas</div>
+                  <div class="location">Denton,US</div>
+                  <div class="degree">Graduate Assistant</div>
+                  <div class="Duration">January 2024 - May 2024</div>
+                </div>
+              </div>
+              <div class="details">
+                <div class="logo">
+                  <img src="/assets/vezham.png" alt="">
+                </div>
+                <div class="others">
+                  <div class="Institute">Vezham</div>
+                  <div class="location">Remote</div>
+                  <div class="degree">Software Engineer Intern</div>
+                  <div class="Duration">June 2022 - January 2023</div>
+                </div>
+              </div>
+              <div class="details">
+                <div class="logo">
+                  <img src="/assets/zohologo.jpeg" alt="">
+                </div>
+                <div class="others">
+                  <div class="Institute">Zoho Corporation</div>
+                  <div class="location">Chennai,India</div>
+                  <div class="degree">Software Engineer</div>
+                  <div class="Duration">August 2019 - November 2021</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="sendEmail">
-            <div class="greeting_msg">Excited to connect with like-minded individuals! Send me a message if you want to explore ideas, discuss projects, or just share a friendly greeting.</div>
-            <a class="btn-container" href="mailto:koushica01@gmail.com">
-              <button class="btn emailbtn">Send Email</button>
-            </a>
-          </div>
         </div>
-        <div class="signContainer">
-          <div class="signDiv">Design &amp; Developed By</div>
-          <img src="./assets/signature.png" alt="Signature logo" class="design_sign">
+      </section>
+      <section id="contact">
+        <div class="contactSection" id="contact">
+          <div class="titleContainer">
+            <span class="sectiontitle">Let's connect</span>
+            <div class="HrlineDiv">
+              <div class="titleHrLine2"></div>
+            </div>
+          </div>
+          <div class="socialContainer">
+            <a class="socialIcon github" href="https://github.com/koushica-BU" target="_blank_">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="socialIconItem " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <title></title>
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+              </svg>
+            </a>
+            <a class="socialIcon linkedin" href="https://www.linkedin.com/in/koushica-bu/" target="_blank_">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="socialIconItem " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <title></title>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+              </svg>
+            </a>
+            <a class="socialIcon leetcode" href="https://leetcode.com/shica/" target="_blank_">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="socialIconItem " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <title></title>
+                <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z"></path>
+              </svg>
+            </a>
+            <!-- <a class="socialIcon hackerrank" href="https://www.hackerrank.com/profile/koushica01" target="_blank_">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="socialIconItem " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <title></title>
+                <path d="M12 0c1.285 0 9.75 4.886 10.392 6 .645 1.115.645 10.885 0 12S13.287 24 12 24s-9.75-4.885-10.395-6c-.641-1.115-.641-10.885 0-12C2.25 4.886 10.715 0 12 0zm2.295 6.799c-.141 0-.258.115-.258.258v3.875H9.963V6.908h.701c.141 0 .254-.115.254-.258 0-.094-.049-.176-.123-.221L9.223 4.92c-.049-.063-.141-.109-.226-.109-.084 0-.16.045-.207.107L7.11 6.43c-.072.045-.12.126-.12.218 0 .143.113.258.255.258h.704l.008 10.035c0 .145.111.258.254.258h1.492c.142 0 .259-.115.259-.256v-4.004h4.073v4.152h-.699c-.143 0-.256.115-.256.258 0 .092.048.174.119.219l1.579 1.51c.044.061.141.109.225.109.085 0 .159-.045.208-.109l1.679-1.51c.072-.045.12-.127.12-.219 0-.143-.115-.258-.255-.258h-.704l-.007-10.034c0-.145-.114-.26-.255-.26h-1.494v.002z"></path>
+              </svg>
+            </a> -->
+          </div>
+          <div class="sendEmail">
+            <div class="someEmailIntro">Excited to connect with like-minded individuals! Send me a message if you want to explore ideas, discuss projects, or just share a friendly greeting.</div>
+            <a href="mailto:koushica01@gmail.com">
+              <button class="sendEmailBtn">Send Email
+                <div class="star-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: geometricprecision; text-rendering: geometricprecision; fill-rule: evenodd; clip-rule: evenodd;">
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="star-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: geometricprecision; text-rendering: geometricprecision; fill-rule: evenodd; clip-rule: evenodd;">
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="star-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: geometricprecision; text-rendering: geometricprecision; fill-rule: evenodd; clip-rule: evenodd;">
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="star-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: geometricprecision; text-rendering: geometricprecision; fill-rule: evenodd; clip-rule: evenodd;">
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="star-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: geometricprecision; text-rendering: geometricprecision; fill-rule: evenodd; clip-rule: evenodd;">
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                    </g>
+                  </svg>
+                </div>
+                <div class="star-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: geometricprecision; text-rendering: geometricprecision; fill-rule: evenodd; clip-rule: evenodd;">
+                    <defs></defs>
+                    <g id="Layer_x0020_1">
+                      <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                      <path class="fil0" d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"></path>
+                    </g>
+                  </svg>
+                </div>
+              </button>
+            </a>
+            <div class="signContainer">
+              <div class="signDiv">Designed &amp; Developed By</div>
+              <img src="./assets/signature1.png" alt="Signature logo" class="design_sign">
+            </div>
+          </div>
+          <div class="Container-div">
+            <div class="container"></div>
+          </div>
         </div>
       </section>
     </div>
