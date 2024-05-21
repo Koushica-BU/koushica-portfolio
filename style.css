@@ -279,7 +279,7 @@ section {
 }
 
 .title .highlight_text{
-  color: #ffc6ff;
+  color: #FCFFE0;
 }
 
 .title .highlight_text1{
@@ -293,7 +293,7 @@ section {
 }
 
 .section__text__p2 .highlight_text{
-  color: #fcf5c7;
+  color: #F2BED1;
 }
 
 .profile_summary{
@@ -459,7 +459,7 @@ article .icon {
 }
 
 .ImageContainer .highlight_text1{
-  color: #D2E0FB;
+  color: #E8EFCF;
 }
 
 .hover-bg1:hover{
@@ -468,8 +468,8 @@ article .icon {
 }
 
 .hover-bg2:hover{
-  color: #D2E0FB;
-  border: 1px solid #D2E0FB;
+  color: #E8EFCF;
+  border: 1px solid #E8EFCF;
 }
 
 .IconContainer .Active {
@@ -477,7 +477,7 @@ article .icon {
 }
 
 .ContentContainer {
-  margin: 1rem;
+  margin: 1rem 10rem;
   border-radius: 1rem;
   height: 30vh;
   /* display: flex; */
@@ -491,7 +491,15 @@ article .icon {
   gap: 3rem
 }
 
-.education .details, .workEx .details{
+.award {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem
+}
+
+.education .details, .workEx .details, .award .details{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -499,11 +507,16 @@ article .icon {
 }
 
 .details img{
-  height: 10rem;
+  height: 8rem;
   border-radius: 100%
 }
 
-.details .others{
+.award_details img{
+  height: 5rem;
+  border-radius: 100%
+}
+
+.others{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -515,6 +528,21 @@ article .icon {
 .others .Institute{
   font-size: 1rem;
   font-weight: 600;
+}
+
+.Institute .highlight_text {
+  color: #FCFFE0;
+}
+
+.award a {
+  color: white;
+  text-decoration: none;
+  text-decoration-color: white;
+  font-size: 1rem
+}
+
+.award .navgg:hover {
+  color: rgb(200, 170, 245);
 }
 
 /* CONTACT */

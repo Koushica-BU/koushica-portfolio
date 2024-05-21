@@ -16,6 +16,8 @@ function openBackground(elem){
     details.forEach(el => {
         el.classList.remove('hide');
     });
-    const hidedetails = document.querySelector(`.ContentContainer:not(#${elem.id}_details)`);
-    hidedetails.classList.add('hide')
+    const hidedetails = document.querySelectorAll(`.ContentContainer:not(#${elem.id}_details)`);
+    hidedetails.forEach(el => {
+        el.classList.add('hide');
+    });
 }
