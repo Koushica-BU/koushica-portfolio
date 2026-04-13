@@ -1,7 +1,7 @@
 /* =============================================
    PROJECTS - Add an object here to get a new project card.
    
-   image  → path relative to index.html, e.g. "assets/images/projects/my-app.jpg"
+   image  → path relative to index.html, e.g. "assets/projects/my-app.jpg"
              if missing or broken, a placeholder icon shows automatically
    github → set to null to hide the GitHub button
    demo   → set to null to hide the Live Demo button
@@ -36,7 +36,7 @@ const PROJECTS = [
   },
   // {
   //   title: "Candy Crush Clone",
-  //   image:  "assets/projects/CandyCrush.png",
+  //   image:  "assets/projects/CandyCrush.jpg",
   //   tags:   [
   //     { label: "HTML5",   style: "navy" },
   //     { label: "CSS3", style: "sand" },
@@ -85,7 +85,7 @@ const PROJECTS = [
   },
   // {
   //   title:  "Expandable card",
-  //   image:  "assets/projects/Expandable Card.png",
+  //   image:  "assets/projects/Expandable Card.jpg",
   //   tags:   [
   //     { label: "HTML5",      style: "navy" },
   //     { label: "CSS3",       style: "soft" },
@@ -97,7 +97,7 @@ const PROJECTS = [
   // },
   // {
   //   title:  "Netflix Login page - Clone",
-  //   image:  "assets/projects/netflix-login-page.png",
+  //   image:  "assets/projects/netflix-login-page.jpg",
   //   tags:   [
   //     { label: "HTML5",      style: "navy" },
   //     { label: "CSS3",       style: "soft" },
