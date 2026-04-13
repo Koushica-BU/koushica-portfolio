@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Koushica Bosadi Ulaganathan — Software Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f1520'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='26' font-weight='bold' fill='%23d4b078'%3E%3C/%3E%3C/text%3E%3C/svg%3E"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-row1">
+      <a class="nav-logo" href="#"><div class="nav-logo-dot"></div>Koushica BU</a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#traits">About</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggleDesktop" aria-label="Toggle theme">
+              <span id="knobDesktop"></span>
+            </button>
+          </li>
+        </ul>
+        <a href="assets/resume/Koushica BU.pdf" class="nav-cta" download="Koushica_Bosadi_Ulaganathan.pdf" target="_blank">Resume ↓</a>
+        <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme" style="display:none">
+          <span id="knobMobile"></span>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-drawer" id="navDrawer">
+      <a href="#traits"   class="drawer-link">About</a>
+      <a href="#stack"    class="drawer-link">Stack</a>
+      <a href="#projects" class="drawer-link">Projects</a>
+      <a href="#contact"  class="drawer-link">Contact</a>
+      <a href="assets/resume/Koushica BU.pdf" class="drawer-resume" download="Koushica_Bosadi_Ulaganathan_Resume.pdf" target="_blank">Resume ↓</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">Software Engineer · Based in the US</div>
+        <h1>Hi, I'm<br><span class="name">Koushica</span></h1>
+        <div class="hero-role">Software Engineer</div>
+        <p class="hero-desc">I build responsive, performant web applications with great user experiences — grounded in real-world practicality and a genuine care for the people using them.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work ↓</a>
+          <a id="heroEmailBtn" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hc-photo-wrap">
+          <div class="hc-skeleton"></div>
+          <img id="hcPhoto" src="assets/me.png" alt="Koushica Bosadi Ulaganathan" loading="eager"/>
+          <div class="hc-photo-fallback">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hc-name">Koushica Bosadi Ulaganathan</div>
+        <div class="hc-title">Software Engineer — Full Stack</div>
+        <div class="hc-divider"></div>
+        <div class="hc-detail"><div class="hc-icon">📍</div><span>United States</span></div>
+        <div class="hc-detail"><div class="hc-icon sand">🏢</div><span>Open for onsite &amp; remote across US</span></div>
+        <div class="hc-detail"><div class="hc-icon">🔧</div><span>React · Vue · Node · MongoDB</span></div>
+        <div class="status-row"><div class="status-dot"></div>Available for new opportunities</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAITS -->
+  <section class="traits-section" id="traits">
+    <div class="section-inner">
+      <div class="section-label">Who I Am</div>
+      <h2 class="section-title">How I work &amp; think</h2>
+      <p class="section-sub">These aren't buzzwords — they're the principles I actually try to live by as an engineer.</p>
+      <div class="traits-grid reveal">
+        <div class="trait-card"><span class="trait-icon">🏗️</span><div class="trait-name">Constructive</div><div class="trait-desc">I build things that last — clean, maintainable code and systems I leave better than I found them.</div></div>
+        <div class="trait-card"><span class="trait-icon">🎯</span><div class="trait-name">Competent</div><div class="trait-desc">I take ownership and follow through. Reliability and technical depth are non-negotiable for me.</div></div>
+        <div class="trait-card"><span class="trait-icon">🔄</span><div class="trait-name">Self-Reviewer</div><div class="trait-desc">I revisit decisions regularly — to learn from what worked, fix what didn't, and keep getting sharper.</div></div>
+        <div class="trait-card"><span class="trait-icon">⚙️</span><div class="trait-name">Practical</div><div class="trait-desc">I care about what works in real situations. Theory informs the approach; shipped value is the measure.</div></div>
+        <div class="trait-card"><span class="trait-icon">🧭</span><div class="trait-name">Responsible</div><div class="trait-desc">I think about consequences before I act — whether it's code going to production or a team decision.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack">
+    <div class="section-inner">
+      <div class="section-label">Technology</div>
+      <h2 class="section-title">My Tech Stack</h2>
+      <p class="section-sub">The tools I reach for to build fast, reliable, well-crafted web applications.</p>
+      <div class="stack-grid reveal">
+        <div class="stack-card"><div class="stack-icon">🌐</div><div class="stack-name">HTML5</div></div>
+        <div class="stack-card"><div class="stack-icon">🎨</div><div class="stack-name">CSS3</div></div>
+        <div class="stack-card"><div class="stack-icon">⚡</div><div class="stack-name">JavaScript</div></div>
+        <div class="stack-card"><div class="stack-icon">💚</div><div class="stack-name">Vue.js</div></div>
+        <div class="stack-card"><div class="stack-icon">⚛️</div><div class="stack-name">React</div></div>
+        <div class="stack-card"><div class="stack-icon">🟢</div><div class="stack-name">Node.js</div></div>
+        <div class="stack-card"><div class="stack-icon">🍃</div><div class="stack-name">MongoDB</div></div>
+        <div class="stack-card"><div class="stack-icon">🐙</div><div class="stack-name">Git</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS — cards injected by script.js from constants.js -->
+  <section class="projects-section" id="projects">
+    <div class="section-inner">
+      <div class="projects-header">
+        <div>
+          <div class="section-label">Work</div>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-sub">Things I've built — practical solutions crafted with care and technical rigor.</p>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="carouselPrev" aria-label="Previous project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="carousel-counter">
+            <span id="carouselCurrent">1</span>
+            <span class="carousel-sep">/</span>
+            <span id="carouselTotal">4</span>
+          </div>
+          <button class="carousel-btn" id="carouselNext" aria-label="Next project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="carousel-viewport reveal">
+        <div class="carousel-track" id="carouselTrack"></div>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label">Background</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">A little more context</h2>
+          <p>I'm <strong>Koushica Bosadi Ulaganathan</strong> — a software engineer based in the US with a passion for building web applications that are fast, accessible, and genuinely useful.</p>
+          <p>My approach is grounded in practicality: I care about shipping things that work in the real world, not just in theory. I take ownership, review my decisions critically, and hold myself accountable for outcomes.</p>
+          <p>I'm currently <strong>open to full-time roles across the US</strong> — both onsite and remote — and I'd love to join a team where craft and impact both matter.</p>
+          <div class="about-metrics">
+            <div class="metric"><span class="metric-val">7+</span><div class="metric-label">Technologies</div></div>
+            <div class="metric"><span class="metric-val">US</span><div class="metric-label">Based &amp; Open</div></div>
+            <div class="metric"><span class="metric-val">∞</span><div class="metric-label">Curiosity</div></div>
+            <div class="metric"><span class="metric-val">100%</span><div class="metric-label">Ownership</div></div>
+          </div>
+        </div>
+        <div class="about-panel reveal">
+          <div class="panel-row"><div class="panel-icon">📍</div><div><div class="panel-text">United States</div><div class="panel-sub">Open for onsite &amp; remote</div></div></div>
+          <div class="panel-row"><div class="panel-icon">💼</div><div><div class="panel-text">Full-Stack Engineer</div><div class="panel-sub">Front-end &amp; back-end</div></div></div>
+          <!-- email text injected by JS -->
+          <div class="panel-row"><div class="panel-icon">✉️</div><div><div class="panel-text"><a id="aboutEmail" class="panel-email-link"></a></div><div class="panel-sub">Best way to reach me</div></div></div>
+          <div class="panel-row"><div class="panel-icon">🔗</div><div><div class="panel-text">github.com/koushica-BU</div><div class="panel-sub">See my code</div></div></div>
+          <div class="panel-row"><div class="panel-icon">💡</div><div><div class="panel-text">Practical &amp; Principled</div><div class="panel-sub">Theory-informed, outcome-focused</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title reveal">Let's build something <em style="font-style:italic;color:var(--sand)">meaningful</em> together</h2>
+      <p class="contact-desc reveal">I'm actively looking for software engineering roles across the US — onsite or remote. If you have an opportunity or just want to connect, I'd love to hear from you.</p>
+      <div class="contact-links reveal">
+        <a href="https://github.com/koushica-BU" class="contact-link" target="_blank">🐙 GitHub</a>
+        <a href="https://www.linkedin.com/in/koushica-bu" class="contact-link" target="_blank">💼 LinkedIn</a>
+        <a href="assets/resume/Koushica_Bosadi_Ulaganathan.pdf" class="contact-link" download="Koushica_Bosadi_Ulaganathan_Resume.pdf">📥 Resume</a>
+      </div>
+      <!-- email injected by JS -->
+      <div class="reveal"><a id="contactEmail" class="contact-email"></a></div>
+    </div>
+  </section>
+
+  <footer><p>Koushica Bosadi Ulaganathan &mdash; Software Engineer &mdash; United States &mdash; 2025</p></footer>
+
+  <script src="./common/constant.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
