@@ -24,7 +24,7 @@
 // Fetches the PDF as a blob and triggers a real download,
 // bypassing the browser's tendency to open PDFs inline.
 (function initResumeDownload() {
-  const RESUME_PATH     = 'assets/resume/Koushica_Bosadi_Ulaganathan.pdf';
+  const RESUME_PATH     = 'assets/resume/Koushica BU.pdf';
   const DOWNLOAD_NAME   = 'Koushica_Bosadi_Ulaganathan_Resume.pdf';
 
   document.querySelectorAll('[data-download-resume]').forEach(link => {
@@ -96,7 +96,7 @@ document.getElementById('themeToggleMobile').addEventListener('click', () =>
 
 
 // ── PROFILE PHOTO ──
-// Loads from assets/images/profile.jpg
+// Loads from assets/me.png
 // shimmer skeleton → photo fades in on load → person icon on error
 (function loadProfilePhoto() {
   const img  = document.getElementById('hcPhoto');
