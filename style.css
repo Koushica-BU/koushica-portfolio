@@ -76,10 +76,9 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg); color: var(--ink);
-  overflow-x: hidden; cursor: none;
+  overflow-x: hidden;
   transition: background .4s, color .4s;
 }
-a, button, input, label, select, textarea, [role="button"] { cursor: none; }
 
 /* grid background */
 body::before {
@@ -114,21 +113,6 @@ body::after {
   animation: shimmer 1.6s infinite linear;
 }
 
-/* ── CURSOR ── */
-#cursor {
-  position: fixed; width: 10px; height: 10px; border-radius: 50%;
-  background: var(--sand); pointer-events: none; z-index: 9999;
-  transform: translate(-50%,-50%);
-  transition: width .22s, height .22s, background .22s, opacity .3s;
-  opacity: 0;
-}
-#cursor-ring {
-  position: fixed; width: 32px; height: 32px; border-radius: 50%;
-  border: 1.5px solid var(--sand); pointer-events: none; z-index: 9998;
-  transform: translate(-50%,-50%);
-  transition: width .26s, height .26s, opacity .3s;
-  opacity: 0;
-}
 
 /* ── NAV ── */
 nav {

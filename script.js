@@ -260,30 +260,6 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 })();
 
 
-// ── CUSTOM CURSOR ──
-const cur  = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
-let mx = 0, my = 0, rx = 0, ry = 0, shown = false;
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cur.style.left = mx + 'px'; cur.style.top = my + 'px';
-  if (!shown) { shown = true; cur.style.opacity = '1'; ring.style.opacity = '.42'; }
-});
-document.addEventListener('mouseleave', () => { cur.style.opacity = '0'; ring.style.opacity = '0'; });
-document.addEventListener('mouseenter', () => { if (shown) { cur.style.opacity = '1'; ring.style.opacity = '.42'; } });
-
-(function raf() {
-  rx += (mx - rx) * .12; ry += (my - ry) * .12;
-  ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-  requestAnimationFrame(raf);
-})();
-
-document.querySelectorAll('a, button, .trait-card, .stack-card, .project-card').forEach(el => {
-  el.addEventListener('mouseenter', () => { cur.style.width='18px'; cur.style.height='18px'; cur.style.background='var(--navy)'; ring.style.width='46px'; ring.style.height='46px'; });
-  el.addEventListener('mouseleave', () => { cur.style.width='10px'; cur.style.height='10px'; cur.style.background='var(--sand)'; ring.style.width='32px'; ring.style.height='32px'; });
-});
-
 
 // ── SCROLL REVEAL ──
 const revealObs = new IntersectionObserver((entries, obs) => {
