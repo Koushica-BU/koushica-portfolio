@@ -448,34 +448,24 @@ h2.section-title {
 }
 .ptag-more:hover { border-color: var(--ink-light); color: var(--ink-soft); }
 
-/* tooltip bubble */
-.ptag-more::after {
-  content: attr(data-tooltip);
-  position: absolute; bottom: calc(100% + 8px); left: 50%;
-  transform: translateX(-50%) translateY(4px);
+/* tooltip is rendered via JS (#stack-tooltip) to escape carousel overflow:hidden */
+#stack-tooltip {
+  position: fixed;
   background: var(--ink); color: var(--bg);
   font-size: .72rem; font-weight: 500; letter-spacing: .03em;
-  white-space: nowrap; padding: .45rem .75rem; border-radius: 6px;
+  padding: .45rem .75rem; border-radius: 6px;
   box-shadow: 0 6px 20px rgba(0,0,0,.18);
-  opacity: 0; pointer-events: none;
-  transition: opacity .2s, transform .2s;
-  z-index: 100;
+  pointer-events: none; z-index: 9999;
+  white-space: normal; max-width: 240px; text-align: center; line-height: 1.5;
+  opacity: 0; transition: opacity .2s;
 }
-/* arrow pointing down */
-.ptag-more::before {
+#stack-tooltip.visible { opacity: 1; }
+#stack-tooltip::after {
   content: '';
-  position: absolute; bottom: calc(100% + 3px); left: 50%;
-  transform: translateX(-50%) translateY(4px);
+  position: absolute; top: 100%; left: var(--arrow-left, 50%);
+  transform: translateX(-50%);
   border: 5px solid transparent;
   border-top-color: var(--ink);
-  opacity: 0; pointer-events: none;
-  transition: opacity .2s, transform .2s;
-  z-index: 100;
-}
-.ptag-more:hover::after,
-.ptag-more:hover::before {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
 }
 .project-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem; }
 .project-desc { font-size: .9rem; line-height: 1.7; color: var(--ink-soft); margin-bottom: 1.3rem; flex: 1; }

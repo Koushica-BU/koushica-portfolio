@@ -187,7 +187,6 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
         <div class="project-img-fallback">${IMG_FALLBACK}</div>
       </div>
       <div class="project-body">
-        <div class="project-num">${String(i + 1).padStart(2, '0')}</div>
         <div class="project-tag-row">${tags}</div>
         <div class="project-title">${p.title}</div>
         <p class="project-desc">${p.desc}</p>
@@ -211,20 +210,25 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     }
   });
 
-  // Build dots
-  PROJECTS.forEach((_, i) => {
-    const dot = document.createElement('div');
-    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', () => goTo(i));
-    dotsEl.appendChild(dot);
-  });
-
   function visibleCount() { return window.innerWidth <= 900 ? 1 : 2; }
 
   function cardWidth() {
     const card = track.querySelector('.project-card');
     if (!card) return 0;
     return card.offsetWidth + (parseFloat(getComputedStyle(track).gap) || 0);
+  }
+
+  let lastTotalPages = 0;
+
+  function buildDots(totalPages) {
+    dotsEl.innerHTML = '';
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'carousel-dot';
+      dot.addEventListener('click', () => goTo(i * visibleCount()));
+      dotsEl.appendChild(dot);
+    }
+    lastTotalPages = totalPages;
   }
 
   function updateCarousel() {
@@ -234,12 +238,15 @@ drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 
     track.style.transform = `translateX(-${current * cardWidth()}px)`;
 
-    curEl.textContent = vis > 1
-      ? `${current + 1}–${Math.min(current + vis, total)}`
-      : `${current + 1}`;
+    const totalPages  = Math.ceil(total / vis);
+    const currentPage = Math.floor(current / vis);
+    curEl.textContent = currentPage + 1;
+    totEl.textContent = totalPages;
+
+    if (totalPages !== lastTotalPages) buildDots(totalPages);
 
     dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) =>
-      d.classList.toggle('active', i === current));
+      d.classList.toggle('active', i === currentPage));
 
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current >= maxIdx;
@@ -278,3 +285,48 @@ const revealObs = new IntersectionObserver((entries, obs) => {
 }, { threshold: .1 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+
+// ── TECH STACK TOOLTIP ──
+// CSS ::after can't escape carousel's overflow:hidden, so we drive this via JS.
+(function initStackTooltip() {
+  const tip = document.createElement('div');
+  tip.id = 'stack-tooltip';
+  document.body.appendChild(tip);
+
+  let hideTimer;
+
+  document.addEventListener('mouseenter', e => {
+    const el = e.target.closest('.ptag-more');
+    if (!el) return;
+    clearTimeout(hideTimer);
+    tip.classList.remove('visible');
+    tip.textContent = el.dataset.tooltip || '';
+    // wait one frame so the browser lays out the new text before we measure
+    requestAnimationFrame(() => {
+      positionTip(el);
+      tip.classList.add('visible');
+    });
+  }, true);
+
+  document.addEventListener('mouseleave', e => {
+    if (!e.target.closest('.ptag-more')) return;
+    hideTimer = setTimeout(() => tip.classList.remove('visible'), 100);
+  }, true);
+
+  function positionTip(el) {
+    const r    = el.getBoundingClientRect();
+    const card = el.closest('.project-card');
+    const cr   = card ? card.getBoundingClientRect() : { left: 0, right: window.innerWidth };
+
+    const tw = tip.offsetWidth;
+    const th = tip.offsetHeight;
+    const buttonCenterX = r.left + r.width / 2;
+    let left = buttonCenterX - tw / 2;
+    left = Math.max(cr.left, Math.min(left, cr.right - tw));
+    tip.style.left = left + 'px';
+    tip.style.top  = (r.top - th - 10) + 'px';
+    // keep arrow pointing at the button regardless of clamping
+    tip.style.setProperty('--arrow-left', (buttonCenterX - left) + 'px');
+  }
+})();
