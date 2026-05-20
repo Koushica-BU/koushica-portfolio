@@ -34,18 +34,18 @@ const PROJECTS = [
     github: "https://github.com/Koushica-BU/md-editor",
     demo:   "https://koushica-bu.github.io/md-editor/",
   },
-  // {
-  //   title:  "Error Decoder",
-  //   image:  "assets/projects/markdown-editor.png",
-  //   tags:   [
-  //     { label: "HTML5",      style: "navy" },
-  //     { label: "CSS3",       style: "sand" },
-  //     { label: "JavaScript", style: "soft" },
-  //   ],
-  //   desc:   "An in-browser Markdown editor with a formatting toolbar, split-pane live preview, edit and preview modes, word and character counters, a syntax cheatsheet, and copy-to-clipboard support.",
-  //   github: "https://github.com/Koushica-BU/md-editor",
-  //   demo:   "https://koushica-bu.github.io/md-editor/",
-  // },
+  {
+    title:  "Error Decoder",
+    image:  "assets/projects/error-decoder.png",
+    tags:   [
+      { label: "HTML5",      style: "navy" },
+      { label: "CSS3",       style: "sand" },
+      { label: "JavaScript", style: "soft" },
+    ],
+    desc:   "An AI-powered web app that transforms cryptic error messages into plain-English explanations with root cause analysis and fix suggestions — built with React, TypeScript, and Gemini AI.",
+    github: "https://github.com/Koushica-BU/error-decoder",
+    demo:   "https://error-decoder-kbu.vercel.app/",
+  },
   {
     title:  "Pantry Pal",
     image:  "assets/projects/PantryPal.png",
